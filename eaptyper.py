@@ -95,6 +95,8 @@ class wpaSupplicantWrapper():
                 proposedMethod = ['wlan1: CTRL-EVENT-EAP-PROPOSED-METHOD vendor=0 method=17']
             elif(int(proposedMethod[0].split('=')[2][0:2]) == 21):
                 proposedMethod = ['wlan1: CTRL-EVENT-EAP-PROPOSED-METHOD vendor=0 method=21']
+            elif(int(proposedMethod[0].split('=')[2][0:2]) == 25):
+                proposedMethod = ['wlan1: CTRL-EVENT-EAP-PROPOSED-METHOD vendor=0 method=25']
             elif(int(proposedMethod[0].split('=')[2][0:2]) == 43):
                 proposedMethod = ['wlan1: CTRL-EVENT-EAP-PROPOSED-METHOD vendor=0 method=43']
             elif(int(proposedMethod[0].split('=')[2][0:2]) == 52):
