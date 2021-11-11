@@ -2,7 +2,7 @@
 # python modules
 import os
 
-__version__ = "1.0"
+__version__ = "1.1"
 
 # Directory Mapping
 root_dir, conf_file = os.path.split(os.path.abspath(__file__))
@@ -28,7 +28,7 @@ supported_eap_methods = [
     'md5',
     'peap',
     'tls',
-    'ttls',
+    'ttls'
 ]
 
 # Do not modify
