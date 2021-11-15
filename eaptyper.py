@@ -16,7 +16,7 @@ parser.add_argument('-v', '--verbose', dest='verbose', default=False, action='st
 parser.add_argument('-i', '--interface', dest='interface', help='Specify interface')
 parser.add_argument('-t', '--timeout', dest='timeout', type=int, default=config.argpaser_timeout, help='Control timeout for wpa_supplicant connection length. Default: {}'.format(config.argpaser_timeout))
 parser.add_argument('-s', '--ssid', dest='ssid', help='Specify target SSID.')
-parser.add_argument('--hidden', dest='hidden', default=config.argparser_hidden, help='Toggle for hidden network detection. Default: {}'.format(config.argparser_hidden))
+parser.add_argument('--hidden', dest='hidden', action='store_true', default=False, help='Toggle for hidden network detection. Default: False')
 
 eapSettingsOptions.add_argument('--pairwise', dest='pairwise', default=config.argparser_pairwise_encryption, choices=['CCMP TKIP', 'TKIP CCMP'], help='Specify pairwise encryption order. Default: {}'.format(config.argparser_pairwise_encryption))
 eapSettingsOptions.add_argument('--group', dest='group', default=config.argparser_group_encryption, choices=['CCMP TKIP', 'TKIP CCMP'], help='Specify group encryption order. Default: {}'.format(config.argparser_group_encryption))
@@ -164,6 +164,7 @@ if __name__ == '__main__':
             target_ssid=options['ssid']
         )
         print('[+]  Connecting to target "{}" network'.format(options['ssid']))
+        options['hidden'] = 1 if options['hidden'] else 0
         for method in config.supported_eap_methods:
             if(method == 'peap'):
                 conf_manager.wpa_supplicant_conf_peap.configure(

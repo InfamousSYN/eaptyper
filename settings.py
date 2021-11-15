@@ -20,7 +20,6 @@ argparser_eap_password = 'infamoussyn'
 argparser_pairwise_encryption = 'CCMP TKIP'
 argparser_group_encryption = 'CCMP TKIP'
 argparser_default_client_private_password = 'infamoussyn'
-argparser_hidden = 0
 argpaser_timeout = 15
 
 #
