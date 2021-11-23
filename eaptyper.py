@@ -129,7 +129,8 @@ class wpaSupplicantWrapper():
         command = [
                     'wpa_supplicant',
                     '-i{}'.format(options['interface']),
-                    '-c{}'.format(config.wpa_supplicant_conf_file_location)
+                    '-c{}'.format(config.wpa_supplicant_conf_file_location),
+                    '-f{}/{}_{}_wpa_supplicant.log'.format(config.wpa_supplicant_logfile_location, self.target_ssid, target_method)
         ]
         if(options['verbose']):
             print('[+] Executing wpa_supplicant command: {}'.format(command))

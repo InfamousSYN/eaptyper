@@ -10,6 +10,7 @@ working_dir = root_dir + '/tmp'
 
 # File Mapping
 wpa_supplicant_conf_file_location = working_dir + '/wpa_supplicant.conf'
+wpa_supplicant_logfile_location = working_dir
 default_ca_cert_location = working_dir + '/radius.pem'
 argparser_default_client_cert_location = working_dir + '/client.pem'
 argparser_default_client_private_key_location = working_dir + '/private.key'
