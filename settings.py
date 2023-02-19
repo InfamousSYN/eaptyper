@@ -2,7 +2,7 @@
 # python modules
 import os
 
-__version__ = "1.1"
+__version__ = "2.0.0-dev"
 
 # Directory Mapping
 root_dir, conf_file = os.path.split(os.path.abspath(__file__))
